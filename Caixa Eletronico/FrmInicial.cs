@@ -30,6 +30,7 @@ namespace Caixa_Eletronico
         private void btCaixa_Click(object sender, EventArgs e)
         {
             frmCxe cxe= new frmCxe();
+            cxe.ShowDialog();
         }
     }
 }
