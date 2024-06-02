@@ -33,7 +33,11 @@ namespace Caixa_Eletronico
                 txbConta.Visible = true;
                 lblConta.Visible = true;
             }
-            Recarregar();
+            if (oprecao == 4)
+            {
+                Recarregar();
+                dgvTransacoes1.Visible = true;
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -41,12 +45,25 @@ namespace Caixa_Eletronico
 
         }
 
+        public class Transacao1
+        {
+            public double valor;
+            public char tipo;
+            public Transacao duplicata;
+            public string numero;
+        }
+
         public void Recarregar()
         {
             Conta contaA = s.GetConta();
             frmPrincipal frmprin = new frmPrincipal();
             var source = new BindingSource();
-            List<Transacao> tran = s.transacoes.Where(s.transacoes.Any => Any == contaA).ToList();
+            List <Transacao> tran = s.transacoes.Where(conta => conta.Conta.Numero == contaA.Numero).ToList();
+            List<Transacao1> tran1;
+            foreach(Transacao transacao in tran)
+            {
+                
+            }
             source.DataSource = tran;
             dgvTransacoes1.DataSource = source;
         }
@@ -70,14 +87,16 @@ namespace Caixa_Eletronico
             }
             if (operacao == 3)
             {
-                Conta contaD = s.BuscarConta(txbConta.Text);
+                s.SetContaD(s.BuscarConta(txbConta.Text));
+                Conta contaD = s.GetContaD();
                 contaA.Transferir(contaD, Convert.ToDouble(numericUpDown1.Value));
 
                 s.transacoes.Add(new Transacao(Convert.ToDouble(numericUpDown1.Value), 'S', contaA));
                 s.transacoes[s.transacoes.Count - 1].Duplicata = contaD.Transacoes[contaD.Transacoes.Count - 1];
-                contaD.Transacoes[contaD.Transacoes.Count - 1].Duplicata = s.transacoes[s.transacoes.Count - 1];
 
                 s.transacoes.Add(new Transacao(Convert.ToDouble(numericUpDown1.Value), 'D', contaD));
+                s.transacoes[s.transacoes.Count - 1].Duplicata = s.transacoes[s.transacoes.Count - 1];
+
                 this.Close();
             }
             if (operacao == 4)

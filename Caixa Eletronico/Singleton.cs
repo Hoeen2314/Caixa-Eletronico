@@ -18,7 +18,7 @@ namespace Caixa_Eletronico
             transacoes = new List<Transacao>();
         }
 
-        private static Singleton _instance;
+            private static Singleton _instance;
 
         public static Singleton Instance
         {
@@ -33,6 +33,11 @@ namespace Caixa_Eletronico
         }
         public List<Conta> contas;
         public List<Transacao> transacoes;
+        
+
+        Conta contaAcesso;
+        Conta contaDestino;
+        int operacao;
 
         public Conta BuscarConta(string numero)
         {
@@ -41,8 +46,7 @@ namespace Caixa_Eletronico
             return c;
         }
 
-        Conta contaAcesso;
-        int operacao;
+        
 
         public void SetConta(Conta conta)
         {
@@ -52,6 +56,16 @@ namespace Caixa_Eletronico
         public Conta GetConta()
         {
             return contaAcesso;
+        }
+
+        public void SetContaD(Conta conta)
+        {
+            contaDestino = conta;
+        }
+
+        public Conta GetContaD()
+        {
+            return contaDestino;
         }
 
         public void setOperacao(int op)

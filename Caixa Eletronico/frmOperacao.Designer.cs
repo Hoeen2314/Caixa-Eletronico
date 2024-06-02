@@ -44,17 +44,19 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(324, 206);
+            numericUpDown1.Font = new Font("Segoe UI", 12F);
+            numericUpDown1.Location = new Point(236, 139);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.Size = new Size(245, 29);
             numericUpDown1.TabIndex = 0;
             numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // btnRealizar
             // 
-            btnRealizar.Location = new Point(343, 270);
+            btnRealizar.Font = new Font("Segoe UI", 12F);
+            btnRealizar.Location = new Point(269, 256);
             btnRealizar.Name = "btnRealizar";
-            btnRealizar.Size = new Size(75, 23);
+            btnRealizar.Size = new Size(186, 48);
             btnRealizar.TabIndex = 1;
             btnRealizar.Text = "Realizar";
             btnRealizar.UseVisualStyleBackColor = true;
@@ -63,7 +65,7 @@
             // lblOperacao
             // 
             lblOperacao.AutoSize = true;
-            lblOperacao.Location = new Point(361, 138);
+            lblOperacao.Location = new Point(345, 35);
             lblOperacao.Name = "lblOperacao";
             lblOperacao.Size = new Size(38, 15);
             lblOperacao.TabIndex = 2;
@@ -72,26 +74,29 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(280, 208);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(151, 141);
             label2.Name = "label2";
-            label2.Size = new Size(36, 15);
+            label2.Size = new Size(49, 21);
             label2.TabIndex = 3;
             label2.Text = "Valor:";
             // 
             // txbConta
             // 
-            txbConta.Location = new Point(333, 235);
+            txbConta.Font = new Font("Segoe UI", 12F);
+            txbConta.Location = new Point(236, 190);
             txbConta.Name = "txbConta";
-            txbConta.Size = new Size(100, 23);
+            txbConta.Size = new Size(245, 29);
             txbConta.TabIndex = 4;
             txbConta.Visible = false;
             // 
             // lblConta
             // 
             lblConta.AutoSize = true;
-            lblConta.Location = new Point(280, 238);
+            lblConta.Font = new Font("Segoe UI", 12F);
+            lblConta.Location = new Point(151, 193);
             lblConta.Name = "lblConta";
-            lblConta.Size = new Size(42, 15);
+            lblConta.Size = new Size(54, 21);
             lblConta.TabIndex = 5;
             lblConta.Text = "Conta:";
             lblConta.Visible = false;
@@ -103,16 +108,17 @@
             // dgvTransacoes1
             // 
             dgvTransacoes1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransacoes1.Location = new Point(627, 140);
+            dgvTransacoes1.Location = new Point(116, 35);
             dgvTransacoes1.Name = "dgvTransacoes1";
-            dgvTransacoes1.Size = new Size(240, 150);
+            dgvTransacoes1.Size = new Size(479, 290);
             dgvTransacoes1.TabIndex = 6;
+            dgvTransacoes1.Visible = false;
             // 
             // frmOperacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 450);
+            ClientSize = new Size(723, 368);
             Controls.Add(dgvTransacoes1);
             Controls.Add(lblConta);
             Controls.Add(txbConta);
