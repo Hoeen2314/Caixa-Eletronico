@@ -25,6 +25,7 @@ namespace Caixa_Eletronico
         {
             Conta conta = s.BuscarConta(txbCNum.Text);
             if (conta != null){
+                s.SetConta(conta);
                 frmPrincipal frmprincipal = new frmPrincipal();
                 frmprincipal.ShowDialog();
                 this.Close();

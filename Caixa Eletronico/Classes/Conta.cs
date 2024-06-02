@@ -33,6 +33,11 @@ namespace Caixa_Eletronico.Classes
             get => status;
             set => status = value;
         }
+        public List<Transacao> Transacoes
+        {
+            get => transacoes;
+            set => transacoes = transacoes;
+        }
 
         public Conta()
         {

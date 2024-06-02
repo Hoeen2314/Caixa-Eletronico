@@ -39,9 +39,10 @@
             // 
             // btnVoltar
             // 
-            btnVoltar.Location = new Point(12, 12);
+            btnVoltar.Location = new Point(10, 9);
+            btnVoltar.Margin = new Padding(3, 2, 3, 2);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(185, 48);
+            btnVoltar.Size = new Size(162, 36);
             btnVoltar.TabIndex = 0;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
@@ -49,63 +50,71 @@
             // 
             // btnDepositar
             // 
-            btnDepositar.Location = new Point(206, 129);
+            btnDepositar.Location = new Point(180, 97);
+            btnDepositar.Margin = new Padding(3, 2, 3, 2);
             btnDepositar.Name = "btnDepositar";
-            btnDepositar.Size = new Size(405, 45);
+            btnDepositar.Size = new Size(354, 34);
             btnDepositar.TabIndex = 1;
             btnDepositar.Text = "Depositar";
             btnDepositar.UseVisualStyleBackColor = true;
+            btnDepositar.Click += btnDepositar_Click;
             // 
             // btnSacar
             // 
-            btnSacar.Location = new Point(206, 206);
+            btnSacar.Location = new Point(180, 154);
+            btnSacar.Margin = new Padding(3, 2, 3, 2);
             btnSacar.Name = "btnSacar";
-            btnSacar.Size = new Size(405, 48);
+            btnSacar.Size = new Size(354, 36);
             btnSacar.TabIndex = 2;
             btnSacar.Text = "Sacar";
             btnSacar.UseVisualStyleBackColor = true;
+            btnSacar.Click += btnSacar_Click;
             // 
             // btnTransferir
             // 
-            btnTransferir.Location = new Point(206, 288);
+            btnTransferir.Location = new Point(180, 216);
+            btnTransferir.Margin = new Padding(3, 2, 3, 2);
             btnTransferir.Name = "btnTransferir";
-            btnTransferir.Size = new Size(405, 45);
+            btnTransferir.Size = new Size(354, 34);
             btnTransferir.TabIndex = 3;
             btnTransferir.Text = "Transferir";
             btnTransferir.UseVisualStyleBackColor = true;
+            btnTransferir.Click += btnTransferir_Click;
             // 
             // btnVerExtrato
             // 
-            btnVerExtrato.Location = new Point(206, 357);
+            btnVerExtrato.Location = new Point(180, 268);
+            btnVerExtrato.Margin = new Padding(3, 2, 3, 2);
             btnVerExtrato.Name = "btnVerExtrato";
-            btnVerExtrato.Size = new Size(405, 48);
+            btnVerExtrato.Size = new Size(354, 36);
             btnVerExtrato.TabIndex = 4;
             btnVerExtrato.Text = "Ver Extrato";
             btnVerExtrato.UseVisualStyleBackColor = true;
+            btnVerExtrato.Click += btnVerExtrato_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(620, 33);
+            label1.Location = new Point(542, 25);
             label1.Name = "label1";
-            label1.Size = new Size(71, 20);
+            label1.Size = new Size(55, 15);
             label1.TabIndex = 5;
             label1.Text = "Saldo: R$";
             // 
             // lblSaldo
             // 
             lblSaldo.AutoSize = true;
-            lblSaldo.Location = new Point(692, 33);
+            lblSaldo.Location = new Point(606, 25);
             lblSaldo.Name = "lblSaldo";
-            lblSaldo.Size = new Size(44, 20);
+            lblSaldo.Size = new Size(34, 15);
             lblSaldo.TabIndex = 6;
             lblSaldo.Text = "00,00";
             // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(lblSaldo);
             Controls.Add(label1);
             Controls.Add(btnVerExtrato);
@@ -113,6 +122,7 @@
             Controls.Add(btnSacar);
             Controls.Add(btnDepositar);
             Controls.Add(btnVoltar);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmPrincipal";
             Text = "frmPrincipal";
             ResumeLayout(false);

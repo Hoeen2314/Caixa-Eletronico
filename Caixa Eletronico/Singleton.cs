@@ -1,9 +1,13 @@
 ﻿using Caixa_Eletronico.Classes;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Caixa_Eletronico
 {
@@ -11,6 +15,7 @@ namespace Caixa_Eletronico
     {
         private Singleton(){
             contas = new List<Conta>() { new CCorrente("123", 200), new CPoupanca("1") };
+            transacoes = new List<Transacao>();
         }
 
         private static Singleton _instance;
@@ -26,14 +31,37 @@ namespace Caixa_Eletronico
                 return _instance;
             }
         }
-
         public List<Conta> contas;
+        public List<Transacao> transacoes;
 
         public Conta BuscarConta(string numero)
         {
             Conta c = contas.Find(c => c.Numero == numero);
 
             return c;
+        }
+
+        Conta contaAcesso;
+        int operacao;
+
+        public void SetConta(Conta conta)
+        {
+            contaAcesso = conta;
+        }
+
+        public Conta GetConta()
+        {
+            return contaAcesso;
+        }
+
+        public void setOperacao(int op)
+        {
+            operacao = op;
+        }
+
+        public int getOperacao()
+        {
+            return operacao;
         }
     }
 }
