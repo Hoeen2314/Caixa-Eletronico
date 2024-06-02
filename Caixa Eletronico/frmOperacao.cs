@@ -57,14 +57,19 @@ namespace Caixa_Eletronico
         {
             Conta contaA = s.GetConta();
             frmPrincipal frmprin = new frmPrincipal();
+
             var source = new BindingSource();
             List <Transacao> tran = s.transacoes.Where(conta => conta.Conta.Numero == contaA.Numero).ToList();
-            List<Transacao1> tran1;
-            foreach(Transacao transacao in tran)
+
+            List<Transacao1> tran1 = tran.Select(t => new Transacao1
             {
-                
-            }
-            source.DataSource = tran;
+                valor = t.Valor,
+                tipo = t.Tipo,
+                duplicata = t.Duplicata,
+                numero = t.Conta.Numero,
+            }).ToList();
+
+            source.DataSource = tran1;
             dgvTransacoes1.DataSource = source;
         }
 

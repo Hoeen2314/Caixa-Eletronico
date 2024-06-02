@@ -108,9 +108,9 @@
             // dgvTransacoes1
             // 
             dgvTransacoes1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransacoes1.Location = new Point(116, 35);
+            dgvTransacoes1.Location = new Point(104, 24);
             dgvTransacoes1.Name = "dgvTransacoes1";
-            dgvTransacoes1.Size = new Size(479, 290);
+            dgvTransacoes1.Size = new Size(495, 315);
             dgvTransacoes1.TabIndex = 6;
             dgvTransacoes1.Visible = false;
             // 
