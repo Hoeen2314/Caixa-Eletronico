@@ -22,21 +22,25 @@ namespace Caixa_Eletronico
             if (oprecao == 1)
             {
                 lblOperacao.Text = "Deposito";
+                this.Text = "Depositar";
             }
             if (oprecao == 2)
             {
                 lblOperacao.Text = "Saque";
+                this.Text = "Sacar";
             }
             if (oprecao == 3)
             {
                 lblOperacao.Text = "Transferir";
                 txbConta.Visible = true;
                 lblConta.Visible = true;
+                this.Text = "Transferir";
             }
             if (oprecao == 4)
             {
                 Recarregar();
                 dgvTransacoes1.Visible = true;
+                this.Text = "Extrato";
             }
         }
 
@@ -57,19 +61,8 @@ namespace Caixa_Eletronico
         {
             Conta contaA = s.GetConta();
             frmPrincipal frmprin = new frmPrincipal();
-
             var source = new BindingSource();
-            List <Transacao> tran = s.transacoes.Where(conta => conta.Conta.Numero == contaA.Numero).ToList();
-
-            List<Transacao1> tran1 = tran.Select(t => new Transacao1
-            {
-                valor = t.Valor,
-                tipo = t.Tipo,
-                duplicata = t.Duplicata,
-                numero = t.Conta.Numero,
-            }).ToList();
-
-            source.DataSource = tran1;
+            source.DataSource = contaA.Transacoes;
             dgvTransacoes1.DataSource = source;
         }
 
@@ -113,6 +106,11 @@ namespace Caixa_Eletronico
         }
 
         private void dgvTransacoes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmOperacao_Load(object sender, EventArgs e)
         {
 
         }

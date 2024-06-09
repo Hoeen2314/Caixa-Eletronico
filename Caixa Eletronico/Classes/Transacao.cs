@@ -39,5 +39,10 @@ namespace Caixa_Eletronico.Classes
             this.tipo = tipo;
             this.conta = conta;
         }
+
+        public override string ToString()
+        {
+            return valor + "; " + tipo + "; " + conta;
+        }
     }
 }

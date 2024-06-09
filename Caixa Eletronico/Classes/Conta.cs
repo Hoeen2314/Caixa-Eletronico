@@ -110,5 +110,10 @@ namespace Caixa_Eletronico.Classes
             }
             return false;
         }
+
+        public override string ToString()
+        {
+            return numero;
+        }
     }
 }

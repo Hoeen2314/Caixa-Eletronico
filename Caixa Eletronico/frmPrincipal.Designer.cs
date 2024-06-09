@@ -97,14 +97,14 @@
             label1.AutoSize = true;
             label1.Location = new Point(542, 25);
             label1.Name = "label1";
-            label1.Size = new Size(55, 15);
+            label1.Size = new Size(39, 15);
             label1.TabIndex = 5;
-            label1.Text = "Saldo: R$";
+            label1.Text = "Saldo:";
             // 
             // lblSaldo
             // 
             lblSaldo.AutoSize = true;
-            lblSaldo.Location = new Point(606, 25);
+            lblSaldo.Location = new Point(587, 25);
             lblSaldo.Name = "lblSaldo";
             lblSaldo.Size = new Size(34, 15);
             lblSaldo.TabIndex = 6;
@@ -124,7 +124,7 @@
             Controls.Add(btnVoltar);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmPrincipal";
-            Text = "frmPrincipal";
+            Text = "Principal";
             ResumeLayout(false);
             PerformLayout();
         }

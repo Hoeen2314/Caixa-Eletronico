@@ -44,6 +44,7 @@
             // 
             // numericUpDown1
             // 
+            numericUpDown1.DecimalPlaces = 2;
             numericUpDown1.Font = new Font("Segoe UI", 12F);
             numericUpDown1.Location = new Point(236, 139);
             numericUpDown1.Name = "numericUpDown1";
@@ -108,7 +109,7 @@
             // dgvTransacoes1
             // 
             dgvTransacoes1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransacoes1.Location = new Point(104, 24);
+            dgvTransacoes1.Location = new Point(112, 24);
             dgvTransacoes1.Name = "dgvTransacoes1";
             dgvTransacoes1.Size = new Size(495, 315);
             dgvTransacoes1.TabIndex = 6;
@@ -128,6 +129,7 @@
             Controls.Add(numericUpDown1);
             Name = "frmOperacao";
             Text = "frmOperacao";
+            Load += frmOperacao_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)transacaoBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvTransacoes1).EndInit();

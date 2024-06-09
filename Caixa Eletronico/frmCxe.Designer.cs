@@ -35,9 +35,10 @@
             // 
             // btnAcessar
             // 
-            btnAcessar.Location = new Point(297, 292);
+            btnAcessar.Location = new Point(260, 219);
+            btnAcessar.Margin = new Padding(3, 2, 3, 2);
             btnAcessar.Name = "btnAcessar";
-            btnAcessar.Size = new Size(194, 90);
+            btnAcessar.Size = new Size(170, 68);
             btnAcessar.TabIndex = 0;
             btnAcessar.Text = "Acessar";
             btnAcessar.UseVisualStyleBackColor = true;
@@ -47,29 +48,31 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(59, 171);
+            label1.Location = new Point(52, 128);
             label1.Name = "label1";
-            label1.Size = new Size(85, 35);
+            label1.Size = new Size(68, 28);
             label1.TabIndex = 1;
             label1.Text = "Conta:";
             // 
             // txbCNum
             // 
-            txbCNum.Location = new Point(205, 179);
+            txbCNum.Location = new Point(179, 134);
+            txbCNum.Margin = new Padding(3, 2, 3, 2);
             txbCNum.Name = "txbCNum";
-            txbCNum.Size = new Size(417, 27);
+            txbCNum.Size = new Size(365, 23);
             txbCNum.TabIndex = 2;
             // 
             // frmCxe
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(txbCNum);
             Controls.Add(label1);
             Controls.Add(btnAcessar);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmCxe";
-            Text = "frmCxe";
+            Text = "Caixa Eletrônico";
             ResumeLayout(false);
             PerformLayout();
         }

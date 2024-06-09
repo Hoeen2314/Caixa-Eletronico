@@ -22,14 +22,14 @@ namespace Caixa_Eletronico
             s = Singleton.Instance;
             Conta contaAcesso = s.GetConta();
             double saldo = contaAcesso.Saldo;
-            lblSaldo.Text = saldo.ToString();
+            lblSaldo.Text = saldo.ToString("C");
         }
 
         public void Atualizar()
         {
             s = Singleton.Instance;
             Conta contaAcesso = s.GetConta();
-            lblSaldo.Text = contaAcesso.Saldo.ToString();
+            lblSaldo.Text = contaAcesso.Saldo.ToString("C");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
